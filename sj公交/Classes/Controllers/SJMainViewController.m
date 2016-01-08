@@ -186,7 +186,6 @@
  *用户位置更新后，会调用此函数
  */
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation{
-    NSLog(@"aaaaa:%f,%f", _bmkLocationService.userLocation.location.coordinate.latitude, _bmkLocationService.userLocation.location.coordinate.longitude);
    
     BMKReverseGeoCodeOption *reverseGeoCodeOption = [[BMKReverseGeoCodeOption alloc] init];
     reverseGeoCodeOption.reverseGeoPoint = _bmkLocationService.userLocation.location.coordinate;
