@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SJMapViewController.h
 //  sj公交
 //
 //  Created by 蔡春雷 on 15/12/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SJMapViewController : UIViewController
 
 @end
-
