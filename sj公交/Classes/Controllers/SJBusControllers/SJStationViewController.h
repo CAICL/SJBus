@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SJSegmentList.h"
 
 @interface SJStationViewController : UIViewController
+
+@property (nonatomic, strong) Result *result;
 
 @end

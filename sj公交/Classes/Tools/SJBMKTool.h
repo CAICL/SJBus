@@ -9,10 +9,19 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
 
-@interface SJBMPTool : NSObject
-singleton_interface(SJBMPTool)
 
-/// 返回一个百度定位对象(BMKLocationService *) 并启动定位功能
-+ (BMKLocationService *)shareBmkLocationService;
+@interface SJBMKTool : NSObject
+singleton_interface(SJBMKTool)
+
+
+/// 获取用户当前的城市
+@property (nonatomic,copy) NSString *userCity;
+
+/// 路径搜索起始站点信息
+@property (nonatomic, strong) BMKPoiInfo *startStationInfo;
+/// 路径搜索结束站点信息
+@property (nonatomic, strong) BMKPoiInfo *endStationInfo;
+
 @end

@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "icon_start_time.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "icon_start_time.png",
+      "filename" : "icon_start_time@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "icon_start_time@3x.png"
     }
   ],
   "info" : {

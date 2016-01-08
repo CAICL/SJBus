@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SJEachRoadBus.h"
+#import "SJSingleBusLine.h"
 @interface SJDetailViewController : UIViewController
 
-@property (nonatomic ,strong) SJEachRoadBus *eachRoadBus;
-@property (nonatomic ,strong) NSArray *stationArray;
+@property (nonatomic ,strong) SJResult *sj_result;
+
 
 @end

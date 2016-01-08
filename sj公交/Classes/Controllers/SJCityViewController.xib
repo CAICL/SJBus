@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SJCityViewController">
             <connections>
-                <outlet property="locationButton" destination="S7k-4Z-c8B" id="NkO-rf-Feh"/>
+                <outlet property="tableView" destination="EwN-dJ-Qpm" id="jRk-Dd-dEN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,33 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7k-4Z-c8B">
-                    <rect key="frame" x="0.0" y="108" width="600" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.51533329189999999" blue="0.98473327040000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="se9-rC-HfM"/>
-                    </constraints>
-                    <state key="normal" title="定位城市"/>
-                </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入城市名称" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eH0-w6-Gge">
-                    <rect key="frame" x="0.0" y="70" width="600" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="bj8-K2-RsV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EwN-dJ-Qpm">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="xU5-jl-f4Y"/>
+                        <outlet property="delegate" destination="-1" id="03p-mk-x5m"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="S7k-4Z-c8B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3YH-77-zAv"/>
-                <constraint firstAttribute="trailing" secondItem="eH0-w6-Gge" secondAttribute="trailing" id="CpQ-H4-KAF"/>
-                <constraint firstItem="eH0-w6-Gge" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H1j-Ro-rTW"/>
-                <constraint firstItem="S7k-4Z-c8B" firstAttribute="top" secondItem="eH0-w6-Gge" secondAttribute="bottom" constant="8" id="NFG-6o-iTt"/>
-                <constraint firstAttribute="trailing" secondItem="S7k-4Z-c8B" secondAttribute="trailing" id="qAH-qc-bg1"/>
-                <constraint firstItem="eH0-w6-Gge" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="wMu-pm-6Ig"/>
+                <constraint firstItem="EwN-dJ-Qpm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DCN-Ku-dZn"/>
+                <constraint firstAttribute="bottom" secondItem="EwN-dJ-Qpm" secondAttribute="bottom" id="I9W-NT-hsD"/>
+                <constraint firstItem="EwN-dJ-Qpm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Ojn-Rf-tte"/>
+                <constraint firstAttribute="trailing" secondItem="EwN-dJ-Qpm" secondAttribute="trailing" id="fJd-p3-iVE"/>
             </constraints>
-            <point key="canvasLocation" x="345" y="338"/>
+            <point key="canvasLocation" x="455" y="366"/>
         </view>
     </objects>
 </document>

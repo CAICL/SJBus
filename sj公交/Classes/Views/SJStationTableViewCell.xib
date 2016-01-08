@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
@@ -18,15 +17,19 @@
                         <rect key="frame" x="8" y="0.0" width="5" height="10"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="9Re-ep-2Q2"/>
+                            <constraint firstAttribute="width" constant="5" id="Wfd-kt-Ihe"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="zDq-nL-fIJ"/>
                         </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_bg_pressed.9" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-qg-Khg">
                         <rect key="frame" x="8" y="33" width="5" height="10"/>
                         <constraints>
+                            <constraint firstAttribute="width" constant="5" id="6t0-iG-lX0"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="bAb-KK-f2W"/>
                             <constraint firstAttribute="height" constant="10" id="hJD-ew-4uW"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5i-FB-YaA">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5i-FB-YaA">
                         <rect key="frame" x="5" y="11" width="25" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,7 +54,6 @@
                     <constraint firstItem="nDq-3H-pOy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MwQ-mt-xRE"/>
                     <constraint firstItem="d5i-FB-YaA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Pc1-0d-eYr"/>
                     <constraint firstItem="d5i-FB-YaA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Pf3-MH-Sjv"/>
-                    <constraint firstItem="Xn3-i7-5e2" firstAttribute="leading" secondItem="d5i-FB-YaA" secondAttribute="trailing" constant="4" id="XgI-Sj-fq4"/>
                     <constraint firstAttribute="trailing" secondItem="Xn3-i7-5e2" secondAttribute="trailing" constant="10" id="cry-n9-ONx"/>
                     <constraint firstItem="Xn3-i7-5e2" firstAttribute="leading" secondItem="d5i-FB-YaA" secondAttribute="trailing" constant="4" id="hKq-iV-8Hx"/>
                     <constraint firstAttribute="bottom" secondItem="WOr-qg-Khg" secondAttribute="bottom" id="oHq-GS-BGL"/>

@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "ico_route_direction_normal.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "ico_route_direction_normal.png",
+      "filename" : "ico_route_direction_normal@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "ico_route_direction_normal@3x.png"
     }
   ],
   "info" : {

@@ -29,4 +29,5 @@ static NSArray *_cityGroupArray = nil;
     }
     return [mutableArray copy];
 }
+
 @end

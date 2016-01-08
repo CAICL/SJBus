@@ -6,16 +6,18 @@
 //  Copyright © 2015年 ccl. All rights reserved.
 //
 
-#import "SJsingleBusLine.h"
+#import "SJSingleBusLine.h"
 
-@implementation SJsingleBusLine
+@implementation SJSingleBusLine
 + (id)parse:(NSDictionary *)responseObj {
-    id model = [self new];
+    id result = responseObj[@"result"];
+    if ([result isKindOfClass:[NSArray class]]) {
+        id model = [self new];
     [responseObj enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([key isEqualToString:@"result"]) {
             NSMutableArray *arr = [NSMutableArray array];
             for (NSDictionary *dic in obj) {
-                [arr addObject:[Result parse:dic]];
+                [arr addObject:[SJResult parse:dic]];
             }
             obj = [arr copy];
         }
@@ -23,7 +25,10 @@
         [model setValue:obj forKey:key];
     }];
     return model;
-}
+
+    }
+    return nil;
+    }
 
 // 防止向不存在的可以赋值 崩溃
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{}
@@ -32,7 +37,7 @@
 @end
 
 
-@implementation Result
+@implementation SJResult
 
 + (id)parse:(NSDictionary *)responseObj {
     id model = [self new];
@@ -46,7 +51,7 @@
         if ([key isEqualToString:@"stationdes"]) {
             NSMutableArray *arr = [NSMutableArray array];
             for (NSDictionary *dic in obj) {
-                [arr addObject:[Stationdes parse:dic]];
+                [arr addObject:[SJStationdes parse:dic]];
             }
             obj = [arr copy];
         }
@@ -61,7 +66,7 @@
 @end
 
 
-@implementation Stationdes
+@implementation SJStationdes
 + (id)parse:(NSDictionary *)responseObj {
     id model = [self new];
     //    [responseObj enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {

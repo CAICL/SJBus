@@ -10,4 +10,6 @@
 
 @interface SJEachLoadTableViewController : UITableViewController
 @property (nonatomic ,strong) NSString *roadStr;
+@property (nonatomic ,strong) NSString *cityName;
+@property (nonatomic ,assign) BOOL pushNum;
 @end

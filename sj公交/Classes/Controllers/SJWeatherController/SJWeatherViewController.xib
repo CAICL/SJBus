@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-LF-ZwA">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_snow-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-LF-ZwA">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azw-Tn-CjA">
@@ -113,11 +113,11 @@
                 <constraint firstItem="azw-Tn-CjA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v4m-ny-6P9"/>
                 <constraint firstItem="azw-Tn-CjA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xGZ-It-4R5"/>
             </constraints>
-            <point key="canvasLocation" x="146" y="398"/>
+            <point key="canvasLocation" x="269" y="377"/>
         </view>
     </objects>
     <resources>
-        <image name="bg" width="320" height="568"/>
+        <image name="bg_snow-1" width="320" height="568"/>
         <image name="placeholder" width="64" height="64"/>
     </resources>
 </document>

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SJSearchStationViewController : UIViewController
-
+@property (nonatomic, assign) BOOL isStartStation;
 @end

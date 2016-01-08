@@ -10,4 +10,8 @@
 
 @interface SJSegmentListTableVC : UITableViewController
 
+@property (nonatomic, strong) NSString *label1;
+@property (nonatomic, strong) NSString *lable2;
+@property (nonatomic ,strong) NSString *urlStr;
+@property (nonatomic ,assign) BOOL pushNum;
 @end

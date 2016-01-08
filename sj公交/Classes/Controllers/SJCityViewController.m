@@ -9,11 +9,12 @@
 #import "SJCityViewController.h"
 #import "SJCityGroup.h"
 #import "SJDataTool.h"
+#import "SJBMKTool.h"
 
 @interface SJCityViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic, strong) NSArray *cityGroupsArray;
-@property (weak, nonatomic) IBOutlet UIButton *locationButton;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -25,18 +26,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initTableView];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(goToMainVC)];
-}
--(void)goToMainVC{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (void)initTableView {
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.locationButton.frame.size.height+self.locationButton.frame.origin.y+8, self.view.frame.size.width, self.view.frame.size.height-self.locationButton.frame.origin.y-self.locationButton.frame.size.height-8)];
-    [self.view addSubview:self.tableView];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.navigationItem.title = @"城市列表";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(goToMainVC)];
     
+}
+//返回
+-(void)goToMainVC{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark --- tableView协议
 
@@ -62,13 +61,15 @@
     SJCityGroup *cityGroup = self.cityGroupsArray[section];
     return cityGroup.title;
 }
+//设置tableView的右边索引
 -(NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-    return [self.cityGroupsArray valueForKey:@"title"];
+    return [self.cityGroupsArray valueForKeyPath:@"title"];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     SJCityGroup *cityGroup = self.cityGroupsArray[indexPath.section];
     NSString *cityName = cityGroup.cities[indexPath.row];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"cityChange" object:self userInfo:@{@"SelectedCityName":cityName}];
+    [SJBMKTool sharedSJBMKTool].userCity = cityName;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

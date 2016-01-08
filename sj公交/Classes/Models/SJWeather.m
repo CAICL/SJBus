@@ -18,18 +18,18 @@
     self = [super init];
     if (self) {
         self.cityName = jsonDic[@"data"][@"request"][0][@"query"];
-      //  NSLog(@"cityName = %@",self.cityName);
+        //  NSLog(@"cityName = %@",self.cityName);
         NSString *iconStr = jsonDic[@"data"][@"current_condition"][0][@"weatherIconUrl"][0][@"value"];
         self.iconURL = [NSURL URLWithString:iconStr];
-       // NSLog(@"iconURL = %@",self.iconURL);
+        // NSLog(@"iconURL = %@",self.iconURL);
         self.currentTemp = [NSString stringWithFormat:@"%@˚",jsonDic[@"data"][@"current_condition"][0][@"temp_C"]];
-       // NSLog(@"current = %@",self.currentTemp);
+        // NSLog(@"current = %@",self.currentTemp);
         self.weatherDesc = jsonDic[@"data"][@"current_condition"][0][@"weatherDesc"][0][@"value"];
-       // NSLog(@"weatherDesc = %@",self.weatherDesc);
+        // NSLog(@"weatherDesc = %@",self.weatherDesc);
         self.minTemp = jsonDic[@"data"][@"weather"][0][@"mintempC"];
-       // NSLog(@"min = %@",self.minTemp);
+        // NSLog(@"min = %@",self.minTemp);
         self.maxTemp = jsonDic[@"data"][@"weather"][0][@"maxtempC"];
-       // NSLog(@"max = %@",self.maxTemp);
+        // NSLog(@"max = %@",self.maxTemp);
     }
     return self;
 }

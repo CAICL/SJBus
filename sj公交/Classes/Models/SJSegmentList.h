@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class Result,Segmentlist;
+/// 单条公交线路模型类
 @interface SJSegmentList : NSObject
 
 @property (nonatomic, strong) NSArray<Result *> *result;
@@ -16,7 +17,7 @@
 @property (nonatomic, assign) NSInteger error_code;
 
 @property (nonatomic, copy) NSString *reason;
-
+/// 返回解析好的SJSegmentList类型对象
 +(id)parse:(NSDictionary *)responseObj;
 
 @end

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SJSegmentList.h"
+#import "SJSingleBusLine.h"
 
 @interface SJMapViewController : UIViewController
 
+@property (nonatomic,strong) Result *map_result;
+
+@property (nonatomic,strong) SJResult *map_SJResult;
 @end
