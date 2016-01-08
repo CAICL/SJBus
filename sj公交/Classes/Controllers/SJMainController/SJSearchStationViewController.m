@@ -32,7 +32,7 @@
     option.city = [SJBMKTool sharedSJBMKTool].userCity;
     option.keyword = [NSString stringWithFormat:@"公交车站 %@", self.textField.text];
     option.pageIndex = 0;
-    option.pageCapacity = 500;
+    option.pageCapacity = 100;
     //发送请求
     BOOL isSuccess = [self.poiSearch poiSearchInCity:option];
     if (isSuccess) {

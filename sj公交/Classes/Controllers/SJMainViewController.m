@@ -82,6 +82,7 @@
     if (self.afn_Reachability_Manager.networkReachabilityStatus == AFNetworkReachabilityStatusNotReachable) {
         [MBProgressHUD showError:@"当前没有网络连接"];
         return;
+        
     }
     
     
